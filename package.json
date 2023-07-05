@@ -1,0 +1,9 @@
+{
+    "name": "com.skyisland.sdk_core",
+    "displayName": "SDKCore",
+    "description": "skyisland sdk core",
+    "version": "0.0.1",
+    "unity": "2021.3",
+    "license": "JJJ",
+    "dependencies": {}
+}
