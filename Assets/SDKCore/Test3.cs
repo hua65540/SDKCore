@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[DefaultExecutionOrder(0)]
-public class Test : MonoBehaviour
+[DefaultExecutionOrder(2)]
+public class Test3 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

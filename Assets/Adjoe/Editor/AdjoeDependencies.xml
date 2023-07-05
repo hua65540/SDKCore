@@ -1,0 +1,10 @@
+<dependencies>
+  <androidPackages>
+    <androidPackage spec="io.adjoe:adjoe-sdk-android:2.0.5">
+      <repositories>
+        <repository>https://releases.adjoe.io/maven</repository>
+      </repositories>
+    </androidPackage>
+    
+  </androidPackages>
+</dependencies>
