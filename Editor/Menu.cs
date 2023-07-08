@@ -6,30 +6,41 @@ using UnityEngine;
 
 public class Menu : EditorWindow
 {
-    [MenuItem("Tools/load")]
-    private static void ShowWindow()
-    {
-        Debug.Log("导入文件");
-        CopyFolder(backupDir,baseDir);
-    }
     
     public static string backupDir = Path.GetFullPath("Packages/com.skyisland.sdk_core/File");
     public static string baseDir = "./Assets/SDKCore";
     
     
+    [MenuItem("Tools/load")]
+    private static void ShowWindow()
+    {
+        Debug.Log("导入文件");
+        CopyFolder(backupDir, baseDir);
+    }
+
+    [MenuItem("Tools/reload")]
+    private static void ShowWindow1()
+    {
+        Debug.Log("重新导入文件");
+        reloadFile(backupDir, baseDir);
+    }
     
-    // 复制文件夹
+    public static void reloadFile(string sourceFolder, string destFolder)
+    {
+        if (System.IO.Directory.Exists(destFolder))
+        {
+            System.IO.Directory.Delete(destFolder);
+        }
+        CopyFolder(sourceFolder,destFolder);
+    }
+
+
+// 复制文件夹
     public static void CopyFolder(string sourceFolder, string destFolder)
     {
         try
         {
-            //先删除文件夹,然后再创建一个新的
-            if (System.IO.Directory.Exists(destFolder))
-            {
-                System.IO.Directory.Delete(destFolder);
-                CopyFolder(sourceFolder,destFolder);
-                return;
-            }
+            
             //如果目标路径不存在,则创建目标路径
             if (!System.IO.Directory.Exists(destFolder))
             {
