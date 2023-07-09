@@ -29,8 +29,8 @@ public class Field
     public static string baseDirmaxSDK = baseDir+"/MaxSdk"; //Applovin 插件
     public static string backupDirPlayServicesResolver = backupDir+"~/PlayServicesResolver"; //前置文件
     public static string baseDirPlayServicesResolver = baseDir+"/PlayServicesResolver"; //前置文件
-    public static string backupDirFirebase = backupDir+"~/Firebase/FirebasePlugin";
-    public static string baseDirFirebase = baseDir+"/Firebase/FirebasePlugin";
+    public static string backupDirFirebase = backupDir+"~/FirebasePlugin";
+    public static string baseDirFirebase = baseDir+"/FirebasePlugin";
 
 
 
