@@ -33,11 +33,31 @@ public class Params
     public static string server_client_id = "736893665228-3fvlvd00e8vm255frmo4870l8po73nj3.apps.googleusercontent.com";
     public static string reward_action_name = "";
     public static string interstitial_action_name = "";
-    public static string playerPrefs_adEcpm = "adEcpm";
+    
     public static string reward_id_android = "bb989c1db1c7f754";
     public static string reward_id_ios = "";
     public static string interstitial_id_android = "";
     public static string interstitial_id_ios = "";
+    //firebase end
+
+
+    //PlayerPrefs key start
+    public static string playerPrefs_adCount = "adCount";
+    public static string playerPrefs_adEcpm = "adEcpm";
+    public static string playerPrefs_ecpmCount = "ecpmCount"; 
+    //PlayerPrefs key end
+
+
+    public static List<int> rewardCount = new List<int>();
+
+    //logevent key start
+    public static string reward_count_event_key = ""; //记录广告次数的key
+    public static List<string> reward_count_event_keys = new List<string>(); //如果key的名称不一样则添加到列表中
+    public static string reward_ecpm_event_key = ""; //记录广告ecpm的key
+    public static List<string> reward_ecpm_event_keys = new List<string>(); //如果key的名称不一样则添加到列表中
+    //logevent key end
+
+
 
 
 

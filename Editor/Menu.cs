@@ -7,8 +7,7 @@ using UnityEngine;
 public class Menu : EditorWindow
 {
     
-    public static string backupDir = Path.GetFullPath("Packages/com.skyisland.sdk_core/File");
-    public static string baseDir = "./Assets/SDKCore";
+    
     
 
     public const string menu = "SDKCore/";
@@ -16,20 +15,37 @@ public class Menu : EditorWindow
     public const string reload = "reload";
 
     public const string aliyun = "Aliyun/";
+    public const string applovin = "Applovin/";
     
     [MenuItem(menu+aliyun+load)]
-    private static void ShowWindow()
+    private static void AliyunLoad()
     {
-        Debug.Log("导入文件");
+        Debug.Log("导入aliyun");
         importFront();
-        CopyFolder(backupDir+Field.aliyun, baseDir+Field.aliyun);
+        CopyFolder(Field.backupDirAliyun,Field.baseDirAliyun);
     }
 
     [MenuItem(menu+aliyun+reload)]
-    private static void ShowWindow1()
+    private static void AliyunReload()
     {
-        Debug.Log("重新导入文件");
-        reloadFile(backupDir, baseDir);
+        Debug.Log("重新导入aliyun");
+        reloadFile(Field.backupDirAliyun, Field.baseDirAliyun);
+    }
+
+    [MenuItem(menu+applovin+load)]
+    private static void ApplovinLoad(){
+        Debug.Log("导入applovin");
+        importFront();
+        CopyFolder(Field.backupDirApplovin,Field.baseDirApplovin);
+        CopyFolder(Field.backupDirmaxSDK,Field.baseDirmaxSDK);
+        CopyFolder(Field.backupDirPlayServicesResolver,Field.baseDirPlayServicesResolver);
+    }
+
+
+    [MenuItem(menu+applovin+reload)]
+    private static void ApplovinReLoad(){
+        Debug.Log("重新导入applovin");
+        reloadFile(Field.backupDirApplovin,Field.baseDirApplovin);
     }
     
     public static void reloadFile(string sourceFolder, string destFolder)
@@ -79,11 +95,11 @@ public class Menu : EditorWindow
 
     //导入前置文件
     public static void importFront(){
-        if(System.IO.Directory.Exists(baseDir+Field.sdkmanager)){
+        if(System.IO.Directory.Exists(Field.baseDirSDKManager)){
             Debug.Log("已有前置文件,如果需要重新导入,请手动删除SDKManager文件");
             return;
         }
-        CopyFolder(backupDir+Field.sdkmanager,baseDir+Field.sdkmanager);
+        CopyFolder(Field.backupDirSDKManager,Field.baseDirSDKManager);
     }
     
 }
