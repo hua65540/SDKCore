@@ -16,6 +16,8 @@ public class Menu : EditorWindow
 
     public const string aliyun = "Aliyun/";
     public const string applovin = "Applovin/";
+    public const string appsflyer = "Appsflyer/";
+    public const string firebaseBase = "Firebase/Analytics/";
     
     [MenuItem(menu+aliyun+load)]
     private static void AliyunLoad()
@@ -38,15 +40,49 @@ public class Menu : EditorWindow
         importFront();
         CopyFolder(Field.backupDirApplovin,Field.baseDirApplovin);
         CopyFolder(Field.backupDirmaxSDK,Field.baseDirmaxSDK);
-        CopyFolder(Field.backupDirPlayServicesResolver,Field.baseDirPlayServicesResolver);
+        
     }
 
 
     [MenuItem(menu+applovin+reload)]
     private static void ApplovinReLoad(){
-        Debug.Log("重新导入applovin");
+        Debug.Log("重新导入applovin,重新导入applovin不会更新插件,只会更改代码");
         reloadFile(Field.backupDirApplovin,Field.baseDirApplovin);
     }
+
+    [MenuItem(menu+appsflyer+load)]
+    private static void AppsflyerLoad(){
+        Debug.Log("导入appsflyer");
+        importFront();
+        CopyFolder(Field.backupDirAppsflyerManager,Field.baseDirDirAppsflyerManager);
+        CopyFolder(Field.backupDirAppsflyer,Field.baseDirAppsflyer);
+        
+    }
+
+
+    [MenuItem(menu+appsflyer+reload)]
+    private static void AppsflyerReload(){
+        Debug.Log("重新导入appsflyer");
+        reloadFile(Field.backupDirAppsflyerManager,Field.baseDirDirAppsflyerManager);
+    }
+
+    [MenuItem(menu+firebaseBase+load)]
+    private static void FirebaseBaseLoad(){
+        Debug.Log("导入firebase");
+        importFront();
+        CopyFolder(Field.backupDirFirebaseBase,Field.baseDirFirebaseBase);
+        CopyFolder(Field.backupDirFirebase,Field.baseDirFirebase);
+        
+    }
+
+
+    [MenuItem(menu+firebaseBase+reload)]
+    private static void FirebaseBaseReload(){
+        Debug.Log("重新导入firebase,firebase重新导入会把插件一起重新导入");
+        reloadFile(Field.backupDirFirebaseBase,Field.baseDirFirebaseBase);
+        reloadFile(Field.backupDirFirebase,Field.backupDirFirebase);
+    }
+
     
     public static void reloadFile(string sourceFolder, string destFolder)
     {
@@ -58,7 +94,11 @@ public class Menu : EditorWindow
     }
 
 
-// 复制文件夹
+
+    
+    
+
+    // 复制文件夹
     public static void CopyFolder(string sourceFolder, string destFolder)
     {
         try
@@ -99,6 +139,7 @@ public class Menu : EditorWindow
             Debug.Log("已有前置文件,如果需要重新导入,请手动删除SDKManager文件");
             return;
         }
+        CopyFolder(Field.backupDirPlayServicesResolver,Field.baseDirPlayServicesResolver);
         CopyFolder(Field.backupDirSDKManager,Field.baseDirSDKManager);
     }
     
