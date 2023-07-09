@@ -15,9 +15,9 @@ public class Field
     public static string baseDirSDKManager = baseDir+"/SDKManager";
     public static string backupDirApplovin = backupDir+"/Applovin";
     public static string baseDirApplovin = baseDir+"/Applovin";
-    public static string backupDirmaxSDK = backupDir+"/MaxSdk";
+    public static string backupDirmaxSDK = backupDir+"~/MaxSdk";
     public static string baseDirmaxSDK = baseDir+"/MaxSdk";
-    public static string backupDirPlayServicesResolver = backupDir+"/PlayServicesResolver";
+    public static string backupDirPlayServicesResolver = backupDir+"~/PlayServicesResolver";
     public static string baseDirPlayServicesResolver = baseDir+"/PlayServicesResolver";
 
 
