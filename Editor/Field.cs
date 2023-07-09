@@ -17,20 +17,20 @@ public class Field
     public static string baseDirSDKManager = baseDir+"/SDKManager";
     public static string backupDirApplovin = backupDir+"~/Applovin";
     public static string baseDirApplovin = baseDir+"/Applovin";
-    public static string backupDirAppsflyerManager = "~/AppsflyerManager";
-    public static string baseDirDirAppsflyerManager = "/AppsflyerManager";
-    public static string backupDirFirebaseBase = "~/Firebase/Firebase_Base";
-    public static string baseDirFirebaseBase = "/Firebase/Firebase_Base";
-    
+    public static string backupDirAppsflyerManager = backupDir+"~/AppsflyerManager";
+    public static string baseDirDirAppsflyerManager = baseDir+"/AppsflyerManager";
+    public static string backupDirFirebaseBase = backupDir+"~/Firebase/Firebase_Base";
+    public static string baseDirFirebaseBase = baseDir+"/Firebase/Firebase_Base";
+
     //----------------------插件
-    public static string backupDirAppsflyer = "~/AppsFlyer"; //appsflyer 插件
-    public static string baseDirAppsflyer = "/AppsFlyer"; //appsflyer 插件
+    public static string backupDirAppsflyer = backupDir+"~/AppsFlyer"; //appsflyer 插件
+    public static string baseDirAppsflyer = baseDir+"/AppsFlyer"; //appsflyer 插件
     public static string backupDirmaxSDK = backupDir+"~/MaxSdk"; //Applovin 插件
     public static string baseDirmaxSDK = baseDir+"/MaxSdk"; //Applovin 插件
     public static string backupDirPlayServicesResolver = backupDir+"~/PlayServicesResolver"; //前置文件
     public static string baseDirPlayServicesResolver = baseDir+"/PlayServicesResolver"; //前置文件
-    public static string backupDirFirebase = "~/FirebasePlugin";
-    public static string baseDirFirebase = "/FirebasePlugin";
+    public static string backupDirFirebase = backupDir+"~/FirebasePlugin";
+    public static string baseDirFirebase = baseDir+"/FirebasePlugin";
 
 
 
