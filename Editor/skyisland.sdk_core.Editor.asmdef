@@ -1,0 +1,17 @@
+{
+    "name": "SkyislandSDKCoreEditor",
+    "references": [
+        "GUID: d98b3db6b429143b48a839f3fdcfd524"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
