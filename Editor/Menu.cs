@@ -18,6 +18,7 @@ public class Menu : EditorWindow
     public const string applovin = "Applovin/";
     public const string appsflyer = "Appsflyer/";
     public const string firebaseBase = "Firebase/Analytics/";
+    public const string iap = "IAP/";
     
     [MenuItem(menu+aliyun+load)]
     private static void AliyunLoad()
@@ -82,7 +83,20 @@ public class Menu : EditorWindow
         reloadFile(Field.backupDirFirebaseBase,Field.baseDirFirebaseBase);
         reloadFile(Field.backupDirFirebase,Field.backupDirFirebase);
     }
+    
+    [MenuItem(menu+iap+load)]
+    private static void IAPLoad(){
+        Debug.Log("导入内购,只会导入逻辑部分,需要手动导入依赖包,请看说明文档IAP部分");
+        importFront();
+        CopyFolder(Field.backupDirIAP,Field.baseDirIAP);
+    }
 
+
+    [MenuItem(menu+iap+reload)]
+    private static void IAPReload(){
+        Debug.Log("重新导入firebase,firebase重新导入会把插件一起重新导入");
+        reloadFile(Field.backupDirIAP,Field.baseDirIAP);
+    }
     
     public static void reloadFile(string sourceFolder, string destFolder)
     {

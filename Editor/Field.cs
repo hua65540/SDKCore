@@ -21,6 +21,8 @@ public class Field
     public static string baseDirDirAppsflyerManager = baseDir+"/AppsflyerManager";
     public static string backupDirFirebaseBase = backupDir+"~/FirebaseBase";
     public static string baseDirFirebaseBase = baseDir+"/FirebaseBase";
+    public static string backupDirIAP = backupDir+"~/IAP";
+    public static string baseDirIAP = "/IAP";
 
     //----------------------插件
     public static string backupDirAppsflyer = backupDir+"~/AppsFlyer"; //appsflyer 插件
